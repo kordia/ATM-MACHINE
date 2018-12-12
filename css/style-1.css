@@ -1,0 +1,13 @@
+.indent{
+    margin-left: 30px;
+    list-style: circle;
+}
+.welcome{
+    margin-left: 45px;
+    list-style: circle;
+}
+.main{
+    margin-left: 45px;
+    padding-bottom: 40px;
+    list-style: circle;
+}

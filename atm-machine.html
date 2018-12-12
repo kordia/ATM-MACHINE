@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/atm.js"></script>
+    <title>Atm Machine</title>
+</head>
+<body>
+    <div class="info">
+        <img src="images/atm-1.png" height="280" width="250">
+    </div>
+    <div class= "display container">
+        <div class='row'>
+            <div class='profile col-sm-12'>
+                <div class="row">
+                    <div class="password col-sm-6">
+                        <form id="login">
+                            <p><b>Please use the keypad to enter your PIN.</b></p>
+                            <label for="psword">PIN:</label>
+                            <input type="password" id="psword" disabled maxlength="4"/>
+                        </form>
+                    </div>
+                    <div class="inform col-sm-6" onclick ="balanceInquiry()">
+                        <form id="future">
+                        </form>
+                    </div>
+                    <div class="agreement col-sm-6" onclick="cashWith()">
+                        <form  id="withdraw" onsubmit="alert('Transaction Complete!'); return false">
+                            <input type="text" value="text"><br>
+                            <input type="submit" value="Submit">
+                        </form>                       
+                    </div>
+                    <div class="cash col-sm-6" onclick ="currencyConvert()">
+                        <form name ="converter">
+                            <table border="2" id="convert">
+                            <tr>
+                            <td>Euro: </td><td><input type="text" name="euro" onChange="euroConverter()" /></td>
+                            </tr>
+                            <tr>
+                            <td>US Dollar: </td><td><input type="text" name="dollar" onChange="dollarConverter()" /></td>
+                            </tr>
+                            <tr>
+                            <td>British Pound:</td><td><input type="text" name="pound" onChange="poundConverter()" /></td>
+                            </tr>
+                            <tr>
+                            <td>Japanese Yen: </td><td><input type="text" name="yen" onChange="yenConverter()" /></td>
+                            </tr>
+                            <tr>
+                            <td colspan="2" align="center"><input type="button" value="Convert!" /></td>
+                            </tr>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="counter col-sm-6" onclick ="enterMoney()">
+                        <center>
+                            <form name = "coinform">
+                            <table border=1 id= "currency">
+                            <tr>
+                            <td align=center>$ 100</td>
+                            <td align=center>$ 50</td>
+                            <td align=center>$ 20</td>
+                            <td align=center>$ 10</td>
+                            <td align=center>$ 5</td>
+                            <td align=center>$ 1</td>
+                            </tr>
+                            <tr>
+                            <td align=center><input type=text name=hun size=3></td>
+                            <td align=center><input type=text name=fif size=3></td>
+                            <td align=center><input type=text name=twe size=3></td>
+                            <td align=center><input type=text name=ten size=3></td>
+                            <td align=center><input type=text name=fiv size=3></td>
+                            <td align=center><input type=text name=one size=3></td>
+                            </tr>
+                            <tr>
+                            <td colspan=6> </td>
+                            </tr>
+                            <tr>
+                            <td> </td>
+                            <td align=center>50 ¢</td>
+                            <td align=center>25 ¢</td>
+                            <td align=center>10 ¢</td>
+                            <td align=center>5 ¢</td>
+                            <td align=center>1 ¢</td>
+                            </tr>
+                            <tr>
+                            <td> </td>
+                            <td align=center><input type=text name=hlf size=3></td>
+                            <td align=center><input type=text name=qtr size=3></td>
+                            <td align=center><input type=text name=dme size=3></td>
+                            <td align=center><input type=text name=nck size=3></td>
+                            <td align=center><input type=text name=pny size=3></td>
+                            </tr>
+                            <tr>
+                            <td colspan=5 align=center>
+                            <input type=button name=calc value="Calculate" onClick="javascript:money(this.form)">
+                            <input type=text name=total size=10>
+                            </td>
+                            </tr>
+                            </table>
+                            </form>
+                        </center>
+                    </div>
+                    <div class="coins col-sm-6" onclick ="returnReciept()">
+                        <form id="mobile">
+                        </form>
+                    </div>
+                    <div class="bye col-sm-6" onclick ="goBack()">
+                        <form id="farewell">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="welcome container">
+            <div class="row">
+                <div class='nav col-sm-12'>
+                    <div class="exit">
+                        <p onclick="goBack()">EXIT</p>
+                    </div>
+                    <div class="state">
+                        <p onclick="balanceInquiry()">STATEMENT</p>
+                    </div>
+                    <div class="fast">
+                        <p onclick="currencyConvert()">CURRENCY</p>
+                    </div>
+                    <div class="money">
+                       <p onclick="enterMoney()">COUNTER</p>
+                    </div>
+                    <div class="receipt">
+                        <p onclick="returnReciept()">RECEIPT</p>
+                    </div>    
+                    <div class="with">
+                        <p onclick="cashWith()">WITHDRAW</p>
+                    </div>             
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="keypad container">
+        <div class="row">
+            <div class="pad col-sm-12">
+                <div class="row">
+                    <div class="front">
+                        <input type="button" id="num0" class="key" value="1"  onclick="showClickedButton(this.value);"/>
+                        <input type="button" id="num1" class="key" value="2" onClick="showClickedButton(this.value);"/>
+                        <input type="button" id="num2" class="key" value="3" onClick="showClickedButton(this.value);"/>
+                        <input type="button" id="cal" class="remove" value="CANCEL" onclick = "cancelMode()"/>
+                    </div>
+                    <div class="forward ">                
+                        <input type="button" id="num3" class="key" value="4" onClick="showClickedButton(this.value);"/>
+                        <input type="button" id="num4" class="key" value="5" onClick="showClickedButton(this.value);"/>
+                        <input type="button" id="num5" class="key" value="6" onClick="showClickedButton(this.value);"/>
+                        <input type="button" id="clr" class="fair" value="CLEAR" onclick = "clearMode()"/>
+                    </div>
+                    <div class="backward ">
+                        <input type="button" id="num6" class="key" value="7" onClick="showClickedButton(this.value);"/>
+                        <input type="button" id="num7" class="key" value="8" onClick="showClickedButton(this.value);"/>
+                        <input type="button" id="num8" class="key" value="9" onClick="showClickedButton(this.value);"/>
+                        <input type="button" id="ent" class="invade" value="ENTER" onclick="checkPIN()"/> 
+                    </div>
+                    <div class="bottom">
+                        <input type="button" id="num9" class="key" value="0" onClick="showClickedButton(this.value);"/>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>

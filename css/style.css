@@ -1,0 +1,306 @@
+*{
+    font-size: 20px;
+}
+#currency{
+    display: none;
+}
+#convert{
+    display: none;
+}
+#mobile{
+    display: none;
+}
+#future{
+    display: none;
+}
+#farewell{
+    display: none;
+}
+#withdraw{
+    display: none;
+}
+#deposit{
+    display: none;
+}
+
+.cash{
+    text-align: center;
+    margin-left: 300px;
+}
+.inform{
+    text-align: center;
+    margin-left: 300px;
+}
+.agreement{
+    text-align: center;
+    margin-left: 300px;
+}
+.counter{
+    text-align: center;
+    margin-left: 300px;
+}
+.display{
+    width: 1450px;
+    height: 450px;
+    border-style: ridge;
+    border: 7px solid #4CAF50;
+    position: relative;
+}
+.info{
+  text-align: center;
+}
+.welcome{
+    margin-left: 50px;
+    text-align: center;
+}
+.password{
+    text-align: center;
+    margin-left: 285px;
+    margin-right: 20px;
+    position: absolute;
+}
+.profile{
+    padding-bottom: 15px;
+    text-align: center;
+    padding-top: 30px;
+    position: absolute;
+}
+
+.key{
+    margin-left: 10px;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    width: 200px;
+    height: 60px;
+   
+}
+.remove{
+    margin-left: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background-color: red;
+    box-shadow: 0 9px #999;
+    width: 200px;
+    height: 60px;
+    
+}
+.fair{
+    margin-left: 10px;
+    cursor: pointer;
+    outline: none;
+    color:black;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    background-color: yellow;
+    width: 200px;
+    height: 60px;
+}
+.invade{
+    margin-left: 10px;
+    color: rgb(14, 70, 14);
+    background-color: #4CAF50;
+    box-shadow: 0 9px #999;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    width: 200px;
+    height: 60px;
+}
+.key:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.remove:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.fair:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.invade:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.keypad{
+    padding-top: 20px;
+}
+.pad{
+    margin-left: 150px;
+}
+.front{
+    margin-bottom: 30px;
+}
+.forward{
+    margin-bottom: 30px;
+}
+.backward{
+    padding-bottom: 30px;
+}
+.bottom{
+    padding-bottom: 30px;
+    margin-left: 212px;
+}
+.nav{
+    position: absolute;
+    padding-top: 80px;
+    margin-left: 25px;
+    margin-top:-40px;
+    z-index: 50px;
+    position: fixed;
+}
+
+.exit p{
+    text-align: center;
+    line-height: 50px;
+}
+
+.exit{
+    float: right;
+    margin-right: 135px;
+    margin-left: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    width: 150px;
+    height: 50px;
+}
+.exit:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.state p{
+    text-align: center;
+    line-height: 50px;
+}
+.state{
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    width: 150px;
+    height: 50px;
+}
+.state:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.fast p{
+    text-align: center;
+    line-height: 50px;
+}
+.fast{
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    width: 150px;
+    height: 50px;
+}
+.fast:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.money p{
+    text-align: center;
+    line-height: 50px;
+}
+.money{
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    width: 150px;
+    height: 50px;
+}
+.money:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.receipt p{
+    text-align: center;
+    line-height: 50px;
+}
+.receipt{
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    width: 150px;
+    height: 50px;
+}
+.receipt:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.with p{
+    text-align: center;
+    line-height: 50px;
+}
+.with{
+    float: left;
+    margin-left: 48px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    width: 150px;
+    height: 50px;
+}
+.withs:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
