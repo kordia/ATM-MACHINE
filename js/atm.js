@@ -15,44 +15,44 @@ var user1 =  {
     balance: {
         Checking: 400,
         Savings: 500
-        }
-    };
+    }
+};
 var user2 = {  
-        firstName: 'Jane',
-        lastName: 'Doe',
-        pin: 7654,
-        phone: 8343487890,
-        card: {
-            name: 'Jane Doe',
-            number: 6111111111111111,
-            exp: '10/19',
-            security: 456,
-            type: 'mastercard',
-            vendor: 'BankPlus'
-        },
-        balance: {
-            Checking: 200,
-            Savings: 700
-        }
-    };
-    var user3 = {
-        firstName: 'Bryce',
-        lastName: 'Mullican',
-        pin: 1997,
-        phone: 3434577900,
-        card: {
-            name: 'Bryce Mullican',
-            number: 4111111111111111,
-            exp: '10/19',
-            security: 321,
-            type: 'visa',
-            vendor: 'Mullican Bank'
-        },
-        balance: {
-            Checking: 300,
-            Savings: 600
-        } 
-    };
+    firstName: 'Carol',
+    lastName: 'Deuce',
+    pin: 7654,
+    phone: 8343487890,
+    card: {
+        name: 'Jane Doe',
+        number: 6111111111111111,
+        exp: '10/19',
+        security: 456,
+        type: 'mastercard',
+        vendor: 'BankPlus'
+    },
+    balance: {
+        Checking: 200,
+        Savings: 700
+    }
+};
+var user3 = {
+    firstName: 'Sarah',
+    lastName: 'Lee',
+    pin: 1997,
+    phone: 3434577900,
+    card: {
+        name: 'Bryce Mullican',
+        number: 4111111111111111,
+        exp: '10/19',
+        security: 321,
+        type: 'visa',
+        vendor: 'Mullican Bank'
+    },
+    balance: {
+        Checking: 300,
+        Savings: 600
+    } 
+};
  
    
     var whichUser = 0;
@@ -61,17 +61,31 @@ var user2 = {
         if (Number(pin) === user1.pin){
             whichUser = user1;
             enterMode();
+            var nav = document.getElementById("nav")
+            nav.style.display = "block";
        } 
        else if (Number(pin) === user2.pin){
             whichUser = user2;
             enterMode();
-       } else if (Number(pin) === user3.pin){
+            var nav = document.getElementById("nav")
+            nav.style.display = "block";
+       } 
+       else if (Number(pin) === user3.pin){
             whichUser = user3;
             enterMode();
+            var nav = document.getElementById("nav")
+            nav.style.display = "block";
        } else {
-        document.getElementById("login").innerHTML = "Invalid PIN";
+            document.getElementById("login").innerHTML = "Invalid PIN";
        }
     }
+    function enterAmount(){
+        var amount = Number(document.getElementById("amount").value);
+        whichUser.balance =  whichUser.balance.Savings - amount;
+        document.getElementById("withdraw-result").innerHTML = "Your new balance is "+ whichUser.balance + "!" ;
+    }
+
+
 
     function balanceInquiry(){
         document.getElementById("login").innerHTML = "Your last Transaction was";
@@ -104,7 +118,7 @@ var user2 = {
     }
     
     function enterMoney(){
-        document.getElementById("login").innerHTML = '<p>Enter the number of bills and coins and the table will calculate the total amount of money you have.</p>'
+        document.getElementById("login").innerHTML = '<p>Enter the number of bills and coins in the table will calculate the total amount of money you have.</p>'
         currency.style.display = "inline-block";
         future.style.display = "none";
         email.style.display = "none";
@@ -124,8 +138,25 @@ var user2 = {
         withdraw.style.display = "none";
     }
     function cashWith(){
-        document.getElementById("login").innerHTML = '<p>How much would you like to withdraw?</p>'
+        document.getElementById("login").innerHTML = ''
         withdraw.style.display = "inline-block";
+        future.style.display = "none";
+        convert.style.display ="none";
+        currency.style.display = "none";
+        farewell.style.display = "none";
+        mobile.style.display = "none";
+    }
+    function leave(){
+        document.getElementById("login").innerHTML = '<form id="depart"></form><label for="savings">How much would you like to withdraw from your Savings Account?</label><input type="number" id="savings" name="num" required/></p><input type="submit" value="Submit"/></form>'
+        withdraw.style.display = "inline-block";
+        future.style.display = "none";
+        convert.style.display ="none";
+        currency.style.display = "none";
+        farewell.style.display = "none";
+        mobile.style.display = "none";
+    }
+    function detach(){
+        document.getElementById("login").innerHTML = '<form id="retreat"></form><label for="checking">How much would you like to withdraw from your Checking Account?</label><input type="number" id="checking" name="num" required/></p><input type="submit" value="Submit"/>'
         future.style.display = "none";
         convert.style.display ="none";
         currency.style.display = "none";

@@ -18,7 +18,7 @@
             <div class='profile col-sm-12'>
                 <div class="row">
                     <div class="password col-sm-6">
-                        <form id="login">
+                        <form id="login" onsubmit="checkPIN()">
                             <p><b>Please use the keypad to enter your PIN.</b></p>
                             <label for="psword">PIN:</label>
                             <input type="password" id="psword" disabled maxlength="4"/>
@@ -29,35 +29,37 @@
                         </form>
                     </div>
                     <div class="agreement col-sm-6" onclick="cashWith()">
-                        <form  id="withdraw" onsubmit="alert('Transaction Complete!'); return false">
-                            <input type="text" value="text"><br>
-                            <input type="submit" value="Submit">
-                        </form>                       
+                         <div class="choice1" id="withdraw">
+                            <label for="name">Enter a withdrawal amount.</label><br>
+                            <input type="number" name="num" id="amount"><br>
+                            <button type="submit" value="Submit" onclick="enterAmount(); event.preventDefault()">Submit</button>
+                            <span id="withdraw-result"></span>
+                        </div> 
                     </div>
                     <div class="cash col-sm-6" onclick ="currencyConvert()">
                         <form name ="converter">
                             <table border="2" id="convert">
-                            <tr>
-                            <td>Euro: </td><td><input type="text" name="euro" onChange="euroConverter()" /></td>
-                            </tr>
-                            <tr>
-                            <td>US Dollar: </td><td><input type="text" name="dollar" onChange="dollarConverter()" /></td>
-                            </tr>
-                            <tr>
-                            <td>British Pound:</td><td><input type="text" name="pound" onChange="poundConverter()" /></td>
-                            </tr>
-                            <tr>
-                            <td>Japanese Yen: </td><td><input type="text" name="yen" onChange="yenConverter()" /></td>
-                            </tr>
-                            <tr>
-                            <td colspan="2" align="center"><input type="button" value="Convert!" /></td>
-                            </tr>
+                                <tr>
+                                    <td>Euro: </td><td><input type="text" name="euro" onChange="euroConverter()" /></td>
+                                </tr>
+                                <tr>
+                                    <td>US Dollar: </td><td><input type="text" name="dollar" onChange="dollarConverter()" /></td>
+                                </tr>
+                                <tr>
+                                    <td>British Pound:</td><td><input type="text" name="pound" onChange="poundConverter()" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Japanese Yen: </td><td><input type="text" name="yen" onChange="yenConverter()" /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center"><input type="button" value="Convert!" /></td>
+                                </tr>
                             </table>
                         </form>
                     </div>
-                    <div class="counter col-sm-6" onclick ="enterMoney()">
+                    <div class="counter col-sm-6" onclick="enterMoney()">
                         <center>
-                            <form name = "coinform">
+                            <form name= "coinform">
                             <table border=1 id= "currency">
                             <tr>
                             <td align=center>$ 100</td>
@@ -117,7 +119,7 @@
         </div>
         <div class="welcome container">
             <div class="row">
-                <div class='nav col-sm-12'>
+                <div id="nav" class='col-sm-12'>
                     <div class="exit">
                         <p onclick="goBack()">EXIT</p>
                     </div>
