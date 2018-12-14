@@ -1,7 +1,7 @@
 *{
     font-size: 20px;
 }
-#currency{
+#equity{
     display: none;
 }
 #convert{
@@ -16,14 +16,21 @@
 #farewell{
     display: none;
 }
-
-#withdraw{
-display: none;
+#take{
+    display: none;
 }
 #deposit{
     display: none;
 }
+#opening{
+    display: visible;
+}
 
+.begin{
+    position:absolute;
+    margin-left: 450px;
+    padding-top: 150px;
+}
 .cash{
     text-align: center;
     margin-left: 300px;
@@ -49,10 +56,11 @@ display: none;
 }
 .display{
     width: 1450px;
-    height: 550px;
+    height: 800px;
     border-style: ridge;
     border: 7px solid #4CAF50;
     position: relative;
+    margin-top: 70px;
 }
 .info{
   text-align: center;
@@ -60,6 +68,7 @@ display: none;
 .welcome{
     margin-left: 50px;
     text-align: center;
+    padding-top: 295px;
 }
 .password{
     text-align: center;
@@ -163,11 +172,10 @@ display: none;
 }
 #nav{
     position: absolute;
-    padding-top: 80px;
+    padding-top: 100px;
     margin-left: 20px;
-    margin-top:-40px;
+    margin-top: -30px;
     display: none;
-
 }
 
 .exit p{
@@ -293,7 +301,7 @@ display: none;
 }
 .with{
     float: left;
-    margin-left: 23px;
+    margin-left: 21px;
     margin-bottom: 20px;
     text-align: center;
     cursor: pointer;

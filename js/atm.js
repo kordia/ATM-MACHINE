@@ -54,7 +54,8 @@ var user3 = {
     } 
 };
  
-   
+
+
     var whichUser = 0;
     function checkPIN(){
         var pin = document.getElementById("psword").value;
@@ -63,20 +64,25 @@ var user3 = {
             enterMode();
             var nav = document.getElementById("nav")
             nav.style.display = "block";
+            opening.style.display = "visible";
        } 
        else if (Number(pin) === user2.pin){
             whichUser = user2;
             enterMode();
             var nav = document.getElementById("nav")
             nav.style.display = "block";
+            opening.style.display = "visible";
+            
        } 
        else if (Number(pin) === user3.pin){
             whichUser = user3;
             enterMode();
             var nav = document.getElementById("nav")
             nav.style.display = "block";
+            opening.style.display = "visible";
        } else {
             document.getElementById("login").innerHTML = "Invalid PIN";
+            opening.style.display = "inline-block";
        }
     }
     function enterAmount(){
@@ -92,79 +98,66 @@ var user3 = {
         var time = new Date();
         document.getElementById("future").innerHTML = time;
         future.style.display = "inline-block";
-        currency.style.display = "none";
+        opening.style.display = "none";
+        equity.style.display = "none";
         email.style.display = "none";
-        convert.style.display ="none";
+        convert.style.display = "none";
         farewell.style.display = "none";
-        withdraw.style.display = "none";
+        take.style.display = "none";
     }
     function currencyConvert(){
         document.getElementById("login").innerHTML = "<p>If you are in a different country, enter the amount of money you would like to spend and press convert.<p>";
         convert.style.display = "inline-block";
+        opening.style.display = "none";
         future.style.display = "none";
-        currency.style.display = "none";
+        equity.style.display = "none";
         email.style.display = "none";
         farewell.style.display = "none";
-        withdraw.style.display = "none";
+        take.style.display = "none";
     }
     function goBack(){
         document.getElementById("login").innerHTML = '<p>GoodBye, have a nice day!</p>'
         farewell.style.display = "inline-block";
+        opening.style.display = "inline-block";
         future.style.display = "none";
         convert.style.display ="none";
-        currency.style.display = "none";
+        equity.style.display = "none";
         email.style.display = "none";
-        withdraw.style.display = "none";
+        take.style.display = "none";
     }
     
     function enterMoney(){
         document.getElementById("login").innerHTML = '<p>Enter the number of bills and coins in the table will calculate the total amount of money you have.</p>'
-        currency.style.display = "inline-block";
+        equity.style.display = "inline-block";
+        opening.style.display = "none";
         future.style.display = "none";
         email.style.display = "none";
         convert.style.display ="none";
         farewell.style.display = "none";
-        withdraw.style.display = "none";
+        take.style.display = "none";
     }
   
     
     function returnReciept(){
         document.getElementById("login").innerHTML = '<form id="mobile"><p><label for="phone_num">Enter your phone number to recieve receipt message.</label><input type="tel" id="phone_num" name="phone_num" required/></p><input type="submit" value="Send"/></form>'
         mobile.style.display = "inline-block";
+        opening.style.display = "inline-block";
         future.style.display = "none";
         convert.style.display ="none";
-        currency.style.display = "none";
+        equity.style.display = "none";
         farewell.style.display = "none";
-        withdraw.style.display = "none";
+        take.style.display = "none";
     }
     function cashWith(){
         document.getElementById("login").innerHTML = ''
-        withdraw.style.display = "inline-block";
+        take.style.display = "inline-block";
+        opening.style.display = "inline-block";
         future.style.display = "none";
         convert.style.display ="none";
-        currency.style.display = "none";
+        equity.style.display = "none";
         farewell.style.display = "none";
         mobile.style.display = "none";
     }
-    function leave(){
-        document.getElementById("login").innerHTML = '<form id="depart"></form><label for="savings">How much would you like to withdraw from your Savings Account?</label><input type="number" id="savings" name="num" required/></p><input type="submit" value="Submit"/></form>'
-        withdraw.style.display = "inline-block";
-        future.style.display = "none";
-        convert.style.display ="none";
-        currency.style.display = "none";
-        farewell.style.display = "none";
-        mobile.style.display = "none";
-    }
-    function detach(){
-        document.getElementById("login").innerHTML = '<form id="retreat"></form><label for="checking">How much would you like to withdraw from your Checking Account?</label><input type="number" id="checking" name="num" required/></p><input type="submit" value="Submit"/>'
-        future.style.display = "none";
-        convert.style.display ="none";
-        currency.style.display = "none";
-        farewell.style.display = "none";
-        mobile.style.display = "none";
-    }
-  
-
     function clickedButton(key){
         var pin= document.getElementById("psword");
         pin.value = key;
@@ -178,6 +171,7 @@ var user3 = {
     function enterMode() {
         console.log(whichUser);
         document.getElementById("login").innerHTML = "Welcome " + whichUser.firstName + "!";
+        opening.style.display = "inline-block";
   }
     function clearMode() {
         document.getElementById("psword").value = '';
