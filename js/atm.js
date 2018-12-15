@@ -111,7 +111,6 @@ var user3 = {
         opening.style.display = "none";
         future.style.display = "none";
         equity.style.display = "none";
-        email.style.display = "none";
         farewell.style.display = "none";
         take.style.display = "none";
     }
@@ -119,10 +118,10 @@ var user3 = {
         document.getElementById("login").innerHTML = '<p>GoodBye, have a nice day!</p>'
         farewell.style.display = "inline-block";
         opening.style.display = "inline-block";
+        nav.style.display = "none";
         future.style.display = "none";
         convert.style.display ="none";
         equity.style.display = "none";
-        email.style.display = "none";
         take.style.display = "none";
     }
     
@@ -131,7 +130,6 @@ var user3 = {
         equity.style.display = "inline-block";
         opening.style.display = "none";
         future.style.display = "none";
-        email.style.display = "none";
         convert.style.display ="none";
         farewell.style.display = "none";
         take.style.display = "none";
@@ -141,7 +139,7 @@ var user3 = {
     function returnReciept(){
         document.getElementById("login").innerHTML = '<form id="mobile"><p><label for="phone_num">Enter your phone number to recieve receipt message.</label><input type="tel" id="phone_num" name="phone_num" required/></p><input type="submit" value="Send"/></form>'
         mobile.style.display = "inline-block";
-        opening.style.display = "inline-block";
+        opening.style.display = "none";
         future.style.display = "none";
         convert.style.display ="none";
         equity.style.display = "none";
@@ -151,7 +149,7 @@ var user3 = {
     function cashWith(){
         document.getElementById("login").innerHTML = ''
         take.style.display = "inline-block";
-        opening.style.display = "inline-block";
+        opening.style.display = "none";
         future.style.display = "none";
         convert.style.display ="none";
         equity.style.display = "none";

@@ -1,5 +1,5 @@
 *{
-    font-size: 20px;
+    font-size: 25px;
 }
 #equity{
     display: none;
@@ -25,11 +25,21 @@
 #opening{
     display: visible;
 }
+#nav{
+    display: none;
+}
+.outer{
+    background-color: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
 
 .begin{
-    position:absolute;
+    position: absolute;
     margin-left: 450px;
-    padding-top: 150px;
+    margin-top: 245px;
 }
 .cash{
     text-align: center;
@@ -55,10 +65,11 @@
     margin-left: 300px;
 }
 .display{
-    width: 1450px;
-    height: 800px;
-    border-style: ridge;
+    width: 1950px;
+    height: 880px;
     border: 7px solid #4CAF50;
+    background-color: white;
+    box-shadow: 3px 3px 0px 10px rgb(57, 129, 60);
     position: relative;
     margin-top: 70px;
 }
@@ -66,10 +77,12 @@
   text-align: center;
 }
 .welcome{
-    margin-left: 50px;
     text-align: center;
-    padding-top: 295px;
+    left: 20px;
+    margin-bottom: 30px;
+    position: relative;
 }
+
 .password{
     text-align: center;
     margin-left: 285px;
@@ -79,7 +92,7 @@
 .profile{
     padding-bottom: 15px;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 85px;
     position: absolute;
 }
 
@@ -151,10 +164,8 @@
     transform: translateY(4px);
 }
 
-.keypad{
-    padding-top: 20px;
-}
 .pad{
+    margin-top: 62px;
     margin-left: 150px;
 }
 .front{
@@ -170,13 +181,7 @@
     padding-bottom: 30px;
     margin-left: 212px;
 }
-#nav{
-    position: absolute;
-    padding-top: 100px;
-    margin-left: 20px;
-    margin-top: -30px;
-    display: none;
-}
+
 
 .exit p{
     text-align: center;
@@ -314,11 +319,11 @@
     width: 150px;
     height: 50px;
 }
-.withs:active{
+.with:active{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
-.coolin {
+.bring {
     float: left;
     margin-left: 40px;
     margin-bottom: 10px;
@@ -333,11 +338,11 @@
     width: 150px;
     height: 50px;
 }
-.coolin:active{
+.bring:active{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
-.coolin p{
+.bring p{
     text-align: center;
     line-height: 50px;
 }
