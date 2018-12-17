@@ -28,6 +28,9 @@
 #nav{
     display: none;
 }
+#amount{
+    margin-bottom: 10px;
+}
 .outer{
     background-color: black;
     padding-top: 50px;
@@ -343,29 +346,6 @@
     transform: translateY(4px);
 }
 .bring p{
-    text-align: center;
-    line-height: 50px;
-}
-.cooldown {
-    float: left;
-    margin-left: 48px;
-    margin-bottom: 10px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-    width: 150px;
-    height: 50px;
-}
-.cooldown:active{
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-.cooldown p{
     text-align: center;
     line-height: 50px;
 }
