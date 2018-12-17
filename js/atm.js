@@ -106,7 +106,7 @@ var user3 = {
         take.style.display = "none";
     }
     function currencyConvert(){
-        document.getElementById("login").innerHTML = "<p>If you are in a different country, enter the amount of money you would like to spend and press convert.<p>";
+        document.getElementById("login").innerHTML = "<p><b>If you are in a different country, enter the amount of money you would like to spend and press convert.</b><p>";
         convert.style.display = "inline-block";
         opening.style.display = "none";
         future.style.display = "none";
@@ -115,7 +115,7 @@ var user3 = {
         take.style.display = "none";
     }
     function goBack(){
-        document.getElementById("login").innerHTML = '<p>Goodbye, have a nice day!</p>'
+        document.getElementById("login").innerHTML = '<p><b>Goodbye, have a nice day!</b></p>'
         farewell.style.display = "inline-block";
         opening.style.display = "inline-block";
         nav.style.display = "none";
@@ -126,7 +126,7 @@ var user3 = {
     }
     
     function enterMoney(){
-        document.getElementById("login").innerHTML = '<p>Enter the number of bills and coins in the table will calculate the total amount of money you have.</p>'
+        document.getElementById("login").innerHTML = '<p><b>Enter the number of bills and coins you currently possess. Then press the button (convert).</b></p>'
         equity.style.display = "inline-block";
         opening.style.display = "none";
         future.style.display = "none";
