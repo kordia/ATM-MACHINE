@@ -115,7 +115,7 @@ var user3 = {
         take.style.display = "none";
     }
     function goBack(){
-        document.getElementById("login").innerHTML = '<p>GoodBye, have a nice day!</p>'
+        document.getElementById("login").innerHTML = '<p>Goodbye, have a nice day!</p>'
         farewell.style.display = "inline-block";
         opening.style.display = "inline-block";
         nav.style.display = "none";
