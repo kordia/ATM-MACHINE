@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style-1.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>ATM Pseudocode</title>
+</head>
+<body>
+    <div class="welcome">
+       <h1>ATM</h1>
+        <h1>Welcome Page</h1>
+        <h2>Account Data</h2>
+        <p>Please press a language.</p>
+    <div class="language">
+
+        <!-----<button type="button">ENGLISH</button>--->
+         <!-----<<button type="button">ESPANOL</button>--->
+    </div>
+        <li class="indent">DISPLAY Insert card</li>
+        <li class="indent">SET Check card if valid</li>
+        <ul>
+            <li class="indent">SET DENY card if invalid</li>
+            <li class="indent">DISPLAY valid card</li>
+            <li class="indent">INPUT valid bank card</li>
+            <li class="indent">DISPLAY Important message - If you do not have an account with this 
+                Bank there will be an additional charge of $2.00 to this card</li>
+            <li class="indent">DISPLAY additional charges to $2.00 if card is not a member of Bank.</li>
+        </ul>
+        <ul>
+            <li class="indent">SET read data from card</li>
+            <li class="indent">SET Card number is read by the bank database</li>
+            <li class="indent">DISPLAY number pad</li>
+            <li class="indent">INSERT PIN number press Enter</li>
+            <li class="indent">SET Request for the PIN number is generated</li>
+            <li class="indent">INPUT Check if entered PIN matches card PIN</li>
+            <li class="indent">INPUT IF entered PIN does not match card PIN</li>
+        </ul>
+        <ul>
+            <li>ELSE</li>
+            <li class="indent">IF invalid PIN number - Display ERROR MESSAGE</li>
+            <li class="indent">DISPLAY go to Exit BUTTON </li>
+            <li class="indent">DISPLAY Enter PIN again</li>
+
+            <li class="indent">INPUT valid PIN</li> 
+            <li class="indent">IF PIN number is correct </li>
+            <li class="indent">DISPLAY Main Menu Screen</li>
+        </ul>
+ 
+    </div>
+    <div class="main">
+        <h2>MAIN MENU</h2>
+        <p>DISPLAY please press an option</p>
+        <p>Ask for chosen option</p>
+            <ul>
+                <li class="indent">INSERT Withdraw Button</li>
+                <li class="indent">DISPLAY which account would you like to withdraw?</li>
+                    <ul>
+                        <li class="indent">INSERT Checking Account Button</li>
+                        <li class="indent">INSERT Savings Account Button</li>
+                    </ul>
+                <li class="indent">INSERT Deposit button</li>
+                <li class="indent">INSERT Transfer funds Button</li>
+                <li class="indent">INSERT Bank Statement button</li>
+                <li class="indent">INSERT Exit Button</li>
+            </ul>
+        <H3>FAST CASH OPTION</H3>
+        <li class="indent">IF option is Withdraw from Savings/ Checking Acount </li>
+        <li class="indent">SET Request for the money withdrawal by the customer is entered in the ATM machine</li>
+        <h1>INPUT Fast Cash option</h1>
+        <li class="indent">Display withdraw Checking/Savings Acount for the Fast Cash option</li>
+            <ul>
+                <p>DISPLAY press screen for the Fast Cash option</p>
+                <li class="indent">DISPLAY Input $20</li>
+                <li class="indent">DISPLAY Input $40</li>
+                <li class="indent">DISPLAY Input $60</li>
+                <li class="indent">DISPLAY Input $80</li>
+                <li class="indent">DISPLAY Input $100</li>
+                <p>DISPLAY enter</p>
+                <li class="indent">INPUT Dispense amount</li>
+            </ul>
+    
+            <li class="indent">DISPLAY Go Back to MAIN SCREEN</li>
+
+        <H3>WITHDRAW</H3>
+        <li class="indent">SET keyPad to enter the amount of money to Withdraw</Li>
+        <li class="indent">DISPLAY the key pad to enter the amount of money to Withdraw</Li>
+        <li class="indent">INSERT amount of money to withdraw</li>
+        <li class="indent">If the amount is greater than </li>
+        <li class="indent">SET balanceRequest is sent from ATM to the bank database.</li>
+        <li class="indent">DISPLAY Press Enter</li>
+        <li class="indent">SET amount of money</li>
+        <li class="indent">SET Check balance if money is in accurate</li>
+        <li class="indent">DISPLAY confirm amount</li>
+        <li class="indent">INPUT Press Enter</li>
+        <div class="note">
+            <li class="indent">* Note that the date and time of withdrawal would be a additional feature that is not available at this time.</li>
+        </div>
+        <li class="indent">DISPLAY IF the amount to be withdrawn is greater than $500, 
+            the ATM informs the customer maximum amount that can be withdrawn.</li>
+        <li class="indent">DISPLAY Done go back to MAIN SCREEN</li>
+        <li class="indent">DISPLAY Dispense amount</li>
+            <ul>
+                <li class="indent">IF there is no money in account or if the account balance is negative, then ATM does not allow the customer to withdraw any money</li>
+                <li class="indent">DISPLAY DONE go back to MAIN SCREEN</li>
+                <li class="indent">Display "Not a valid entry insufficient funds"</li>
+                <li class="indent">SET invalid entry (if the amount of money is not in account)</li>
+            </ul>
+      
+        <li class="indent">DISPLAY Please enter valid entry.</li>
+        <li class="indent">DISPLAY Go Back to MAIN SCREEN</li>
+        <li class="indent">SET Return customer's card</li>
+        <li class="indent">DISPLAY Take your card</li>
+        <li class="indent">SET HAVE A NICE DAY</li>
+        <Li class="indent">DISPLAY HAVE A NICE DAY!</LI>
+
+        <h1>Deposit</h1>
+        <li class="indent">IF option is Deposit </li>
+            <ul>
+                <li class="indent">DISPLAY Ask for the amount to deposit</li>
+                <li class="indent">SET Enter amount for Deposit and money into the ATM</li>
+                <div class="note">
+                    <li class="indent">* Note that the date and time of Deposit would be a additional feature that is not available at this time.</li>
+                </div>
+            </ul>
+        <h3>Bank Statement</h3>
+        <li class="indent">IF option is Bank Statement</LI>
+            <ul>
+                <li class="indent">SET Check balance from Checking /Savings</li>
+                <li class="indent">DISPLAY last Transaction Statement Balance</li>
+                <div class="note">
+                    <li class="indent">* Note that the date and time of Transactions would be a additional feature that is not available at this time. </li>
+                </div>
+            </ul>
+        <li class="indent">DISPLAY Go Back to MAIN SCREEN</li>
+        <h3>Transfer Funds</h3>
+        <li class="indent">SET If transfer funds option</li>
+            <ul>
+                <li class="indent">DISPLAY Checking/ Savings Account </li>
+                <li class="indent">INSERT Enter Amount to Transfer</li>
+                <li class="indent">DISPLAY button to Tranfer Account</li>
+                <li class="indent">SET options to transfer Savings Account to Checking Account</li>
+                <li class="indent">SET options to transfer Checking Account to Savings Account</li>
+            </ul>
+        <li class="indent">DSIPLAY "DONE BUTTON"</li>
+        <li class="indent">DISPLAY "HAVE A GREAT DAY!</li>
+        <li class="indent">DISPLAY Go Back to MAIN SCREEN</li>
+    </div>
+
+
+
+
+
+   
+
+        
+
+        
+
+
+
+
+
+
+</body>
+</html>
