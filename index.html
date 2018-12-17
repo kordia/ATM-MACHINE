@@ -38,27 +38,27 @@
                             </div> 
                         </div>
                         <div class="cash col-sm-6" onclick ="currencyConvert()">
-                        <center>
-                            <form name ="converter">
-                                <table border="5" id="convert">
-                                    <tr>
-                                        <td>Euro: </td><td><input type="text" name="euro" onChange="euroConverter()" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>US Dollar: </td><td><input type="text" name="dollar" onChange="dollarConverter()" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>British Pound:</td><td><input type="text" name="pound" onChange="poundConverter()" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Japanese Yen: </td><td><input type="text" name="yen" onChange="yenConverter()" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2" align="center"><input type="button" value="Convert!" /></td>
-                                    </tr>
-                                </table>
-                            </form>
-                        <center>
+                            <center>
+                                <form name ="converter">
+                                    <table border="5" id="convert">
+                                        <tr>
+                                            <td>Euro: </td><td><input type="text" name="euro" onChange="euroConverter()" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td>US Dollar: </td><td><input type="text" name="dollar" onChange="dollarConverter()" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td>British Pound:</td><td><input type="text" name="pound" onChange="poundConverter()" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Japanese Yen: </td><td><input type="text" name="yen" onChange="yenConverter()" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" align="center"><input type="button" value="Convert!" /></td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            <center>
                         </div>
                         <div class="counter col-sm-6" onclick="enterMoney()">
                             <center>
@@ -150,8 +150,8 @@
         </div>
         <div class="keypad container">
             <div class="row">
-                <div class="pad col-sm-12">
-                    <div class="row">
+                <div class="col-sm-12">
+                    <div class="pad">
                         <div class="front">
                             <input type="button" id="num0" class="key" value="1"  onclick="showClickedButton(this.value);"/>
                             <input type="button" id="num1" class="key" value="2" onClick="showClickedButton(this.value);"/>
@@ -172,7 +172,7 @@
                         </div>
                         <div class="bottom">
                             <input type="button" id="num9" class="key" value="0" onClick="showClickedButton(this.value);"/>
-                        </div>  
+                        </div>
                     </div>
                 </div>
             </div>

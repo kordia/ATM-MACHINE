@@ -3,101 +3,110 @@
 }
 #equity{
     display: none;
-}
+} /* id for money calcultor -hides the entire element*/
+
 #convert{
     display: none;
-}
+} /* id for money conveter */
+
 #mobile{
     display: none;
-}
+} /*id for reciept option */
+
 #future{
     display: none;
-}
+} /*id for statement control */
+
 #farewell{
     display: none;
-}
+} /*id for when the exit button is clicked */
+
 #take{
     display: none;
-}
-#deposit{
-    display: none;
-}
+} /*id is for the display of withdraw option */
+
 #opening{
     display: visible;
-}
+} /*id for logo */
+
 #nav{
     display: none;
-}
+} /*id for navigation buttons controls the different screens */
+
 #amount{
     margin-bottom: 10px;
-}
+} /* id for when entereing the new balance option */
+
 .outer{
     background-color: black;
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 50px;
     padding-right: 50px;
-}
+    height: 1400px;
+} /* controls the background color and size */
 
 .begin{
     position: absolute;
     margin-left: 450px;
     margin-top: 245px;
-}
+} /* id for logo png file */
+
 .cash{
     text-align: center;
     margin-left: 300px;
-}
+} /* id to position money converter */
+
 .inform{
     text-align: center;
     margin-left: 300px;
-}
+} /* id for positioning statement option */
+
 .agreement{
     text-align: center;
     margin-left: 351px;
-}
+} /* id for positioning the withdraw option */
+
 .choice1{
     margin-right:195px;
     margin-bottom: 10px;
-}
-.choice2{
-    margin-right:195px;
-}
+} /* positioning the withdraw option */
+
 .counter{
     text-align: center;
     margin-left: 300px;
-}
+} /* positioning the money counter */
+
 .display{
     width: 1950px;
-    height: 880px;
+    height: 700px;
     border: 7px solid #4CAF50;
     background-color: white;
     box-shadow: 3px 3px 0px 10px rgb(57, 129, 60);
     position: relative;
     margin-top: 70px;
-}
-.info{
-  text-align: center;
-}
+} /* displays the main screen  */
+
 .welcome{
     text-align: center;
     left: 24px;
     margin-bottom: 30px;
     position: relative;
-}
+} /* positins the navigation buttons */
 
 .password{
     text-align: center;
     margin-left: 285px;
     margin-right: 20px;
     position: absolute;
-}
+} /* positions password */
+
 .profile{
     padding-bottom: 15px;
     text-align: center;
     padding-top: 85px;
     position: absolute;
-}
+} /* positions everthing in main screen */
 
 .key{
     margin-left: 10px;
@@ -111,7 +120,8 @@
     width: 200px;
     height: 60px;
    
-}
+} /* designs for the number keys */
+
 .remove{
     margin-left: 10px;
     cursor: pointer;
@@ -123,7 +133,8 @@
     width: 200px;
     height: 60px;
     
-}
+} /* design for the cancel button */
+
 .fair{
     margin-left: 10px;
     cursor: pointer;
@@ -135,7 +146,8 @@
     background-color: yellow;
     width: 200px;
     height: 60px;
-}
+} /* design for the clear button */
+
 .invade{
     margin-left: 10px;
     color: rgb(14, 70, 14);
@@ -148,48 +160,59 @@
     border-radius: 15px;
     width: 200px;
     height: 60px;
-}
+} /* design for the enter button */
+
 .key:active {
     background-color: #3e8e41;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-}
+} /* design for when the key in pressed */
+
 .remove:active{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-}
+} /* design for when the key in pressed */
+
 .fair:active{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-}
+} /* design for when the key in pressed */
+
 .invade:active{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-}
+} /* design for when the key in pressed */
 
 .pad{
-    margin-top: 62px;
-    margin-left: 150px;
-}
+    display: inline-block;
+    position: relative;
+    top: 41px;
+    left: 13%;
+} /* postions the keypad */
+
 .front{
     margin-bottom: 30px;
-}
+} /* postions the first row */
+
 .forward{
     margin-bottom: 30px;
-}
+} /* postions the middle row */
+
 .backward{
     padding-bottom: 30px;
-}
+} /* postions the third button row */
+
 .bottom{
-    padding-bottom: 30px;
-    margin-left: 212px;
-}
+    position: absolute;
+    top: 268px;
+    left: 217px;
+} /* postions the 0 number button */
 
 
 .exit p{
     text-align: center;
     line-height: 50px;
-}
+} /* postions exit button */
 
 .exit{
     float: right;
@@ -206,15 +229,17 @@
     box-shadow: 0 9px #999;
     width: 150px;
     height: 50px;
-}
+} /* designs the exit button */
+
 .exit:active{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-}
+} /* design for when the key in pressed */
+
 .state p{
     text-align: center;
     line-height: 50px;
-}
+}/* positions the text for button */
 .state{
     float: right;
     margin-left: 15px;
@@ -229,15 +254,18 @@
     box-shadow: 0 9px #999;
     width: 150px;
     height: 50px;
-}
+} /* design for the statement button */
+
 .state:active{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-}
+} /* design for when the key in pressed */
+
 .fast p{
     text-align: center;
     line-height: 50px;
-}
+} /* positions the text for button */
+
 .fast{
     float: right;
     margin-left: 15px;
@@ -252,15 +280,18 @@
     box-shadow: 0 9px #999;
     width: 150px;
     height: 50px;
-}
+}/* design for the CURRENCY CONVERT button */
+
 .fast:active{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-}
+}/* design for when the key in pressed */
+
 .money p{
     text-align: center;
     line-height: 50px;
-}
+}/* positions the text for button */
+
 .money{
     float: right;
     margin-left: 15px;
@@ -275,15 +306,18 @@
     box-shadow: 0 9px #999;
     width: 150px;
     height: 50px;
-}
+}/* design for the money calculator */
+
 .money:active{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-}
+} /* design for when the key in pressed */
+
 .receipt p{
     text-align: center;
     line-height: 50px;
-}
+}/* positions the text for button */
+
 .receipt{
     float: right;
     margin-left: 15px;
@@ -298,15 +332,18 @@
     box-shadow: 0 9px #999;
     width: 150px;
     height: 50px;
-}
+}/* design for the RECEIPT button */
+
 .receipt:active{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-}
+}/* design for when the key in pressed */
+
 .with p{
     text-align: center;
     line-height: 50px;
-}
+}/* positions the text for button */
+
 .with{
     float: left;
     margin-left: 25px;
@@ -321,31 +358,10 @@
     box-shadow: 0 9px #999;
     width: 150px;
     height: 50px;
-}
+}/* design for the withdraw button */
+
 .with:active{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-}
-.bring {
-    float: left;
-    margin-left: 40px;
-    margin-bottom: 10px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-    width: 150px;
-    height: 50px;
-}
-.bring:active{
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-.bring p{
-    text-align: center;
-    line-height: 50px;
-}
+}/* design for when the key in pressed */
+

@@ -1,4 +1,5 @@
 nonchar='';
+//User Accounts
 var user1 =  { 
     firstName: 'Larry', 
     lastName: 'Weems',
@@ -58,7 +59,7 @@ var user3 = {
 
     var whichUser = 0;
     function checkPIN(){
-        var pin = document.getElementById("psword").value;
+        var pin = document.getElementById("psword").value; //controls the password PIN for the different accounts
         if (Number(pin) === user1.pin){
             whichUser = user1;
             enterMode();
@@ -71,8 +72,7 @@ var user3 = {
             enterMode();
             var nav = document.getElementById("nav")
             nav.style.display = "block";
-            opening.style.display = "visible";
-            
+            opening.style.display = "visible";    
        } 
        else if (Number(pin) === user3.pin){
             whichUser = user3;
@@ -83,13 +83,13 @@ var user3 = {
        } else {
             document.getElementById("login").innerHTML = "Invalid PIN";
             opening.style.display = "inline-block";
-       }
+       }//tells user you have the wroung PIN
     }
     function enterAmount(){
         var amount = Number(document.getElementById("amount").value);
         whichUser.balance =  whichUser.balance.Savings - amount;
         document.getElementById("withdraw-result").innerHTML = "Your new balance is "+ whichUser.balance + "!" ;
-    }
+    }// gives answer from the user account- the reaction to Submit button
 
 
 
@@ -100,11 +100,11 @@ var user3 = {
         future.style.display = "inline-block";
         opening.style.display = "none";
         equity.style.display = "none";
-        email.style.display = "none";
         convert.style.display = "none";
         farewell.style.display = "none";
         take.style.display = "none";
-    }
+    } //allows a particular time when the user used there account. 
+
     function currencyConvert(){
         document.getElementById("login").innerHTML = "<p><b>If you are in a different country, enter the amount of money you would like to spend and press convert.</b><p>";
         convert.style.display = "inline-block";
@@ -113,7 +113,8 @@ var user3 = {
         equity.style.display = "none";
         farewell.style.display = "none";
         take.style.display = "none";
-    }
+    }// allows user to convert what they want to spend and know how much its worth in different countries.
+
     function goBack(){
         document.getElementById("login").innerHTML = '<p><b>Goodbye, have a nice day!</b></p>'
         farewell.style.display = "inline-block";
@@ -123,7 +124,7 @@ var user3 = {
         convert.style.display ="none";
         equity.style.display = "none";
         take.style.display = "none";
-    }
+    }//displays farewell message
     
     function enterMoney(){
         document.getElementById("login").innerHTML = '<p><b>Enter the number of bills and coins you currently possess. Then press the button (convert).</b></p>'
@@ -133,7 +134,7 @@ var user3 = {
         convert.style.display ="none";
         farewell.style.display = "none";
         take.style.display = "none";
-    }
+    }//money calculator- partcularly for users that have a large sum of money
   
     
     function returnReciept(){
@@ -145,7 +146,8 @@ var user3 = {
         equity.style.display = "none";
         farewell.style.display = "none";
         take.style.display = "none";
-    }
+    } //a reciept option that sends message to your phone number 
+
     function cashWith(){
         document.getElementById("login").innerHTML = ''
         take.style.display = "inline-block";
@@ -155,55 +157,67 @@ var user3 = {
         equity.style.display = "none";
         farewell.style.display = "none";
         mobile.style.display = "none";
-    }
+    }//withdraw option keys in amount
+
     function clickedButton(key){
         var pin= document.getElementById("psword");
         pin.value = key;
         console.log(key)
-    }//keypad
+    }// inputs where the PIN code is inserted on screen 
+
     function showClickedButton(btn){
         clickedButton(nonchar+=btn)
         console.log(btn);
-    }//button to keypad
+    }//when the keypad is clicked key in PIN code from keypad
     
     function enterMode() {
         console.log(whichUser);
         document.getElementById("login").innerHTML = "Welcome " + whichUser.firstName + "!";
         opening.style.display = "inline-block";
-  }
+  } //enter button welcome user
+
     function clearMode() {
         document.getElementById("psword").value = '';
-  }
+  }// clear button
+
     function cancelMode() {
         document.getElementById('psword').value ='';
-  }  
+  }  //cancel button
   
-  function euroConverter(){
+
+
+    //Currency Converter
+    function euroConverter(){
     document.converter.dollar.value = document.converter.euro.value * 1.470
     document.converter.pound.value = document.converter.euro.value * 0.717
     document.converter.yen.value = document.converter.euro.value * 165.192
-    }
+    }//1 Euro equals 1.13 United States Dollar
+
     function dollarConverter(){
     document.converter.euro.value = document.converter.dollar.value * 0.680
     document.converter.pound.value = document.converter.dollar.value * 0.488
     document.converter.yen.value = document.converter.dollar.value * 112.36
     }
+
     function poundConverter(){
     document.converter.dollar.value = document.converter.pound.value * 2.049
     document.converter.euro.value = document.converter.pound.value * 1.394
     document.converter.yen.value = document.converter.pound.value * 230.27
-    }
+    }//1 Pound sterling equals 1.26 United States Dollar
+
     function yenConverter(){
     document.converter.dollar.value = document.converter.yen.value * 0.0089
     document.converter.pound.value = document.converter.yen.value * 0.00434
     document.converter.euro.value = document.converter.yen.value * 0.00605
-    }
+    }//1 Japanese Yen equals 0.0089 United States Dollar
  
+
+    //Money Calculator 
     function s(num, val) {
         amount = num * 1; // amount is the num or NaN
         sum = (!num ? 0 : num) * val;  // the sum for that bill or coin
         
-        if (isNaN(amount)) { // if the entire is not a number
+        if (isNaN(amount)) { // if the entry is not a number
         
         alert(
         "' " + num + " ' is not a valid entry and that field will "
